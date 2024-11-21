@@ -9,6 +9,9 @@ class Tarefa extends Model
 {
     use HasFactory;
 
+    public $timestamps = false;
+    // Permite o preenchimento em massa para esses campos
+    
     protected $fillable = [
         'titulo',
         'descricao'
