@@ -3,7 +3,7 @@
 @section('title', 'Visualizar Tarefa')
 
 @section('content')
-    <h1>Visualizar Tarefa</h1>
+    <h1>veja a Tarefa</h1>
 
     @if($errors->any())
         <div class="alert alert-danger">
@@ -19,11 +19,11 @@
         @csrf
         @method('PUT')
         <div class="mb-3">
-            <label for="titulo" class="form-label">Título</label>
+            <label for="titulo" class="form-label">Nome</label>
             <input type="text" name="titulo" id="titulo" class="form-control" value="{{ $tarefa->titulo }}" required>
         </div>
         <div class="mb-3">
-            <label for="descricao" class="form-label">Descrição</label>
+            <label for="descricao" class="form-label">Informações</label>
             <textarea name="descricao" id="descricao" class="form-control">{{ $tarefa->descricao }}</textarea>
         </div>
     </form>
